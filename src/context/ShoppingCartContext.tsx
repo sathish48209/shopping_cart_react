@@ -60,7 +60,7 @@ export const ShoppingCartContextProvider = ({
   const decreaseCartQuantity = (id: number) => {
     setCartITems((currItems) => {
       if (currItems.find((item) => item.id === id)?.quantity == 1) {
-        return currItems.filter((item) => item.id !== null);
+        return currItems.filter((item) => item.id !== id);
       } else {
         return currItems.map((item) => {
           if (item.id === id) {
